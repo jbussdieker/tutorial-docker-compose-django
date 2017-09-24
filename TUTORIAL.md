@@ -35,3 +35,7 @@ services:
     depends_on:
       - db
 ```
+
+4. Generate the project
+
+`docker-compose run web django-admin.py startproject composeexample .`
