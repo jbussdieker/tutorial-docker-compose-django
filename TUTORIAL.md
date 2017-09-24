@@ -16,3 +16,22 @@ ADD . /code/
 Django>=1.8,<2.0
 psycopg2
 ```
+
+3. Create docker-compose.yml
+
+```
+version: '3'
+
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+```
