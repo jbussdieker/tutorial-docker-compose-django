@@ -9,3 +9,10 @@ ADD requirements.txt /code/
 RUN pip install -r requirements.txt
 ADD . /code/
 ```
+
+2. Create requirements.txt
+
+```
+Django>=1.8,<2.0
+psycopg2
+```
